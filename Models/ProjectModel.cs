@@ -1,4 +1,5 @@
-﻿using ProjectExample.Interfaces;
+﻿using System.Collections.Generic;
+using ProjectExample.Interfaces;
 
 namespace ProjectExample.Models
 {
@@ -10,6 +11,8 @@ namespace ProjectExample.Models
         {
             Path = path;
             Name = name;
+            Children = new List<TaskModel>();
         }
+        public List<TaskModel> Children { get; set; }
     }
 }

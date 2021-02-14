@@ -4,7 +4,7 @@ namespace ProjectExample
 {
     class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
             PrintHelp();
             var isDone = true;
@@ -19,10 +19,12 @@ namespace ProjectExample
 
         private static void PrintHelp()
         {
-            var help = @"Usage: l - list a project or task
+            const string help = @"Usage: l - list a project or task
 cd [dir] - change directory to path
 a [name] - append project or task
-d [name] - delete project or task";
+d [name] - delete project or task
+e [name] - edit task or project";
+
             Console.Write($"{help}\n");
         }
     }
